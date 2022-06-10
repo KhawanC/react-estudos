@@ -8,13 +8,17 @@ import ComponenteSete from "./components/ComponenteSete";
 import ComponenteOito from "./components/ComponenteOito";
 import ComponenteNove from "./components/ComponenteNove";
 import ComponenteDez from "./components/ComponenteDez";
-
-import './App.css'
+import ComponentePai from "./components/comunicacao_direta/ComponentePai";
+import ComponenteMae from "./components/comunicacao_indireta/ComponenteMae";
+import ComponenteA from "./components/comunicacao_indireta_2/ComponenteA";
 
 function App() {
 
   return (
     <>
+      <ComponenteA titulo='Comunicação Indireta v2'/>
+      <ComponenteMae titulo='Comunicação Indireta'/>
+      <ComponentePai titulo='Comunicação Direta'/>
       <ComponenteDez titulo='Componente 10' corTexto='red'/>
       <ComponenteNove titulo='Componente 9' nome='Kian'/>
       <ComponenteOito titulo='Componente8' valor={10} nome='Kelvin'/>
