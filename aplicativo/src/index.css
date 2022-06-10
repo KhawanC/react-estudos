@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+
+    background-color: #0f1317;
+    color: white;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.componente {
+    background-color: rgb(30, 30, 30);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+}
