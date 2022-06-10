@@ -15,7 +15,17 @@ body {
 
 .componente {
     background-color: rgb(30, 30, 30);
-    border-radius: 20px;
     margin: 20px;
-    padding: 10px;
+    padding-inline: 40px;
+    padding-block: 20px;
+}
+
+.titulo {
+    margin: 20px;
+
+    font-size: 1.5em;
+}
+
+.listaClientes {
+    list-style: none;
 }

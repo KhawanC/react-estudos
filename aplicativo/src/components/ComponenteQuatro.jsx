@@ -1,10 +1,11 @@
 import React from 'react';
+import ComponenteCinco from "./ComponenteCinco";
 
 const ComponenteQuatro = (props) => {
     return(
         <div className='componente'>
             <p>Titulo: {props.titulo}</p>
-            {props.children}
+            <ComponenteCinco texto="Hello Word"/>
         </div>
     )
 }
