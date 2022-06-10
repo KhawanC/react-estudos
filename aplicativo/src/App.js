@@ -11,11 +11,13 @@ import ComponenteDez from "./components/ComponenteDez";
 import ComponentePai from "./components/comunicacao_direta/ComponentePai";
 import ComponenteMae from "./components/comunicacao_indireta/ComponenteMae";
 import ComponenteA from "./components/comunicacao_indireta_2/ComponenteA";
+import ComponenteAvoA from "./components/comunicacao_direta_v2/ComponenteAvoA";
 
 function App() {
 
   return (
     <>
+      <ComponenteAvoA titulo='Top level'/>
       <ComponenteA titulo='Comunicação Indireta v2'/>
       <ComponenteMae titulo='Comunicação Indireta'/>
       <ComponentePai titulo='Comunicação Direta'/>
