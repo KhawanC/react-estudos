@@ -34,6 +34,32 @@ body {
   border: 1px solid white;
 }
 
+.navegacao {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.navegacao button {
+  color: white;
+  background-color: transparent;
+  font-size: 0.9em;
+
+  padding: 9px;
+
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.navegacao button:hover {
+  color: #a6f4ff;
+  border: 1px solid #a6f4ff;
+}
+
 .titulo {
   font-size: 2.1em;
 }
