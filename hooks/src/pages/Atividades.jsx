@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import Componente1 from "../componentes/Componente1";
-import Componente2 from "../componentes/Componente2";
-import Componente3 from "../componentes/Componente3";
-import Componente4 from "../componentes/Componente4";
-import Componente5 from "../componentes/Componente5";
-import ComponenteAPI from "../componentes/ComponenteAPI";
-import Componente7 from "../componentes/Componente7";
-import Componente8 from "../componentes/Componente8";
+import Componente1 from "../components/Componente1";
+import Componente2 from "../components/Componente2";
+import Componente3 from "../components/Componente3";
+import Componente4 from "../components/Componente4";
+import Componente5 from "../components/Componente5";
+import ComponenteAPI from "../components/ComponenteAPI";
+import Componente7 from "../components/Componente7";
+import Componente8 from "../components/Componente8";
+import Componente11 from "../components/Componente11";
+import Componente12 from "../components/Componente12";
+import Componente13 from "../components/Componente13";
 
 function Atividades() {
   const [valor, setValor] = useState(0);
@@ -41,6 +44,9 @@ function Atividades() {
       <ComponenteAPI titulo='Utilizando API externa'/>
       <Componente7 titulo='useRef'/>
       <Componente8/>
+      <Componente11 titulo='useMemo'/>
+      <Componente12 titulo='useReducer'/>
+      <Componente13 titulo='useReducer 2'/>
     </>
   );
 }

@@ -58,6 +58,7 @@ body {
 .navegacao button:hover {
   color: #a6f4ff;
   border: 1px solid #a6f4ff;
+  transition: 0.5s;
 }
 
 .titulo {

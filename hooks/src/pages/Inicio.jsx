@@ -1,5 +1,5 @@
 import React from 'react';
-import ComponenteHello from '../componentes/ComponenteHello';
+import ComponenteHello from '../components/ComponenteHello';
 
 function Inicio(props) {
     return (
