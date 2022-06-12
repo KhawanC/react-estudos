@@ -21,6 +21,30 @@ body {
   padding-block: 20px;
 }
 
+.componente2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20em;
+  height: 60px;
+  margin: 15px;
+  gap: 20px;
+
+  border: 1px solid white;
+}
+
 .titulo {
   font-size: 2.1em;
+}
+
+.hr {
+  margin-block: 15px;
+}
+
+.botoes {
+  display: flex;
+
+  padding: 15px;
+  gap: 25px;
 }
