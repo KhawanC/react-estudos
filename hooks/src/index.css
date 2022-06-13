@@ -61,6 +61,34 @@ body {
   transition: 0.5s;
 }
 
+.funcExtra {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  margin-block: 20px;
+}
+
+.funcExtra button {
+  color: white;
+  background-color: transparent;
+  font-size: 0.9em;
+
+  padding: 9px;
+
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.funcExtra button:hover {
+  color: #a6f4ff;
+  border: 1px solid #a6f4ff;
+  transition: 0.5s;
+}
+
 .titulo {
   font-size: 2.1em;
 }
