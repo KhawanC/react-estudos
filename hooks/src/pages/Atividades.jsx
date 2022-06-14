@@ -30,7 +30,6 @@ function Atividades() {
   function decrementar() {
     setValor(valor - 1);
   }
-
   return (
     <>
       <div className="componente">
@@ -51,7 +50,7 @@ function Atividades() {
       <Componente12 titulo='useReducer'/>
       <Componente13 titulo='useReducer 2'/>
       <Componente14 titulo='useParam'/>
-      {/* <Componente15 titulo='API Externa v2'/> */}
+      <Componente15 titulo='API Externa v2'/>
     </>
   );
 }
