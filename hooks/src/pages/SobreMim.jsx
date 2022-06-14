@@ -1,8 +1,13 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { Componente } from "../style/style";
 import img from "../images/finalizado_1.jpg";
 
 function SobreMim(props) {
+
+  let { nome, atb0, atb1, atb2, atb3, atb4} = useParams()
+
+
   return (
     <>
       <Componente>
@@ -11,13 +16,13 @@ function SobreMim(props) {
         </div>
         <div>
           <div>
-          <p>Nome: Kauã Cassiano</p>
+          <p>Nome: {nome}</p>
             <ul>
-                <li>Desenvolvedor Web</li>
-                <li>Residente do Serratec</li>
-                <li>Colaborador MobiCrowd</li>
-                <li>Java hater</li>
-                <li>Jogador de Aphelios</li>
+                <li>{atb0}</li>
+                <li>{atb1}</li>
+                <li>{atb2}</li>
+                <li>{atb3}</li>
+                <li>{atb4}</li>
             </ul>
           </div>
         </div>

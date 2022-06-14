@@ -4,6 +4,10 @@ export const Titulo = styled.p`
 font-size: 2.1em;
 `;
 
+export const CardAPI = styled.div`
+display: flex;
+`;
+
 export const Componente = styled.div`
 background-color: rgb(30, 30, 30);
 

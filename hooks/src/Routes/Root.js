@@ -11,6 +11,7 @@ function Root(props) {
             <Routes>
                 <Route path='/' element={<Inicio />} />
                 <Route path='/atividades' element={<Atividades />} />
+                <Route path='/sobre_mim/:nome&:atb0&:atb1&:atb2&:atb3&:atb4' element={<SobreMim />} />
                 <Route path='/sobre_mim' element={<SobreMim />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>

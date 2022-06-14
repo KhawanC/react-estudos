@@ -59,12 +59,14 @@ const Componente8 = () => {
                 {status}
                 <hr className='hr'/>
                 <p>Tarefas: </p>
+                <div className='containerCards'>
                 {listaTarefas.map(e => {
                     return <div className='componente2' key={e.id}>
                         <span>{e.texto}</span>
                         <button onClick={() => {removerTarefa(e.id)}}>remover</button>
                     </div>
                 })}
+                </div>
             </div>
         </>
     )
