@@ -8,7 +8,7 @@ function Componente16(props) {
     let htmlUsuario = useRef()
 
     useEffect(() => {
-        const getUsuario = async() => {
+        const getUsuarioAPI = async() => {
             const res = await SerraFunko.get('cliente')
             setListUsuarios(res.data)
         }
@@ -27,7 +27,7 @@ function Componente16(props) {
             )
         }
 
-        getUsuario()
+        getUsuarioAPI()
         htmlUsuario.current = carregarUsuarios()
     }, [idUsuario])
 
