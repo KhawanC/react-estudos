@@ -1,19 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import SerraFunko from '../Services/SerraFunko';
 
 function Componente16(props) {
 
     const [listUsuarios, setListUsuarios] = useState([])
     const [idUsuario, setIdUsuario] = useState(0)
+    let htmlUsuario = useRef()
 
     useEffect(() => {
-
         const getUsuario = async() => {
             const res = await SerraFunko.get('cliente')
             setListUsuarios(res.data)
         }
+
+        const carregarUsuarios = () => {
+            return(
+                <>
+                    <div>
+                        <p>Nome: {listUsuarios[idUsuario].nomeCompleto}</p>
+                        <p>Cpf: {listUsuarios[idUsuario].cpf}</p>
+                        <p>Data de nascimento: {listUsuarios[idUsuario].dataNascimento}</p>
+                        <p>Email: {listUsuarios[idUsuario].email}</p>
+                        <p>Telefone: {listUsuarios[idUsuario].telefone}</p>
+                    </div>
+                </>
+            )
+        }
+
         getUsuario()
-    }, [])
+        htmlUsuario.current = carregarUsuarios()
+    }, [idUsuario])
 
     return (
         <>
@@ -24,13 +40,7 @@ function Componente16(props) {
                 <input type="number" id="quantity" name="quantity" min="0" max={listUsuarios.length - 1} defaultValue='0' onChange={e => {setIdUsuario(e.target.value)}}></input>
                 <br/>
                 <br/>
-                <div>
-                    <p>Nome: {listUsuarios[idUsuario].nomeCompleto}</p>
-                    <p>Cpf: {listUsuarios[idUsuario].cpf}</p>
-                    <p>Data de nascimento: {listUsuarios[idUsuario].dataNascimento}</p>
-                    <p>Email: {listUsuarios[idUsuario].email}</p>
-                    <p>Telefone: {listUsuarios[idUsuario].telefone}</p>
-                </div>
+                {htmlUsuario.current}
             </div>
         </>
     );
