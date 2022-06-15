@@ -165,10 +165,6 @@ margin: 50px;
     margin-inline: 95px;
 }
 
-.tutorialContent .textoExemplo:nth-word(2) {
-    color: red;
-}
-
 `
 
 export const GameStyled = styled.div`
@@ -185,6 +181,16 @@ export const GameStyled = styled.div`
 
 .telaInicial .tituloJogo{
     display: flex;
+    justify-content: center;
+    
+    margin-bottom: 15px;
+
+    animation: rainbow 2.5s linear;
+	animation-iteration-count: infinite;
+}
+
+.textoFinalizadoCerto {
+	display: flex;
     justify-content: center;
     
     margin-bottom: 15px;

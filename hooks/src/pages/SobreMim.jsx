@@ -7,8 +7,8 @@ function SobreMim(props) {
 
   let { nome, atb0, atb1, atb2, atb3, atb4} = useParams()
 
-  const find = '_'
-  var re = new RegExp(find, 'g')
+  // const find = '_'
+  // var re = new RegExp(find, 'g')
 
   return (
     <>
@@ -18,13 +18,13 @@ function SobreMim(props) {
         </div>
         <div>
           <div>
-          <p>Nome: {nome.replace(re, ' ')}</p>
+          <p>Nome: {nome}</p>
             <ul>
-                <li>{atb0.replace(re, ' ')}</li>
-                <li>{atb1.replace(re, ' ')}</li>
-                <li>{atb2.replace(re, ' ')}</li>
-                <li>{atb3.replace(re, ' ')}</li>
-                <li>{atb4.replace(re, ' ')}</li>
+                <li>{atb0}</li>
+                <li>{atb1}</li>
+                <li>{atb2}</li>
+                <li>{atb3}</li>
+                <li>{atb4}</li>
             </ul>
           </div>
         </div>

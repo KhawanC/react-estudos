@@ -52,7 +52,7 @@ function Atividades() {
       <Componente13 titulo='useReducer 2'/>
       <Componente14 titulo='useParam'/>
       <Componente15 titulo='API Externa v2'/>
-      <Componente16 titulo='API SerraFunko'/>
+      {/* <Componente16 titulo='API SerraFunko'/> */}
     </>
   );
 }

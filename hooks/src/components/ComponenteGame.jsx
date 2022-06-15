@@ -1,17 +1,28 @@
-import { type } from '@testing-library/user-event/dist/type';
 import React, { useState } from 'react';
 import { BotaoJogo, GameStyled, Tutorial } from '../style/style';
 
 function ComponenteGame(props) {
 
     const [textoExemplo] = useState('Isso é um teste. Boa sorte!')
+    const [textoVariado, setTextoVariado] = useState('Isso é um teste. Boa sorte!')
+    const [textoCerto, setTextoCerto] = useState('')
+    const [textoErrado, setTextoErrado] = useState('')
     const [isTutorial, setTutorial] = useState(false)
     const [isJogando, setJogando] = useState(false)
+    const [isFinalizado, setFinalizado] = useState(false)
 
     function verificarTexto(texto) {
-        console.log(texto)
-        console.log(textoExemplo.slice(0, texto.length))
+        if(texto === textoExemplo) {
+            setFinalizado(true)
+        } else if(texto === textoExemplo.slice(0, texto.length)){
+            setTextoVariado(textoExemplo.slice(texto.length, textoExemplo.length))
+            setTextoCerto(texto)
+            setTextoErrado('')
+        } else {
+            setTextoErrado(texto.slice(textoCerto.length))
+            setTextoVariado(textoExemplo.slice(texto.length, textoExemplo.length))
 
+        }
     }
 
     const carregarTelas = () => {
@@ -31,12 +42,22 @@ function ComponenteGame(props) {
                 <>
                     <Tutorial>
                         <BotaoJogo>
-                            <button onClick={e => {setTutorial(false)}}>Voltar</button>
+                            <button onClick={e => {
+                                setTutorial(false);
+                                setFinalizado(false);
+                                setTextoCerto('');
+                                setTextoErrado('');
+                                setTextoVariado(textoExemplo)}}>Voltar</button>
                         </BotaoJogo>
                         <div className='tutorialContent'>
                             <p>Digite o texto que aparecer na tela o mais rápido que conseguir, respeitando acentuação, espaçamento, letras maiúsculas e minúsculas. Acumule pontos e cuidado para não perder o tempo.</p>
-                            <input type='text' onChange={e => verificarTexto(e.target.value)}></input>
-                            <p className='textoExemplo'>{textoExemplo}</p>
+                            <input type='text' readOnly={isFinalizado} onChange={e => verificarTexto(e.target.value)}></input>
+                            <div hidden={isFinalizado}>
+                                <span style={{color:'green'}}>{textoCerto}</span>
+                                <span style={{color:'red'}}>{textoErrado}</span>
+                                <span className='textoExemplo'>{textoVariado}</span>
+                            </div>
+                            {isFinalizado ? <div className='textoFinalizadoCerto'><p>{textoExemplo}</p></div> : <></>}
                         </div>
                     </Tutorial>
                 </>
