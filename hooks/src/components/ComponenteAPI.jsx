@@ -8,7 +8,6 @@ const ComponenteAPI = (props) => {
      useEffect(() => {
          fetch('https://dummyjson.com/users').then(res => res.json()).then(
              json => {
-                 console.log(json.users)
                  setUsuario(json.users)
              }
          )

@@ -12,6 +12,7 @@ import Componente12 from "../components/Componente12";
 import Componente13 from "../components/Componente13";
 import Componente14 from "../components/Componente14";
 import Componente15 from "../components/Componente15";
+import Componente16 from "../components/Componente16";
 
 
 function Atividades() {
@@ -51,6 +52,7 @@ function Atividades() {
       <Componente13 titulo='useReducer 2'/>
       <Componente14 titulo='useParam'/>
       <Componente15 titulo='API Externa v2'/>
+      <Componente16 titulo='API SerraFunko'/>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import DummyJson from '../API/DummyJSON';
+import DummyJson from '../Services/DummyJSON';
 import { CardAPI, UsuariosDummy } from '../style/style';
 
 function Componente15(props) {
@@ -7,14 +7,13 @@ function Componente15(props) {
     const [listUsuarios, setListUsuarios] = useState([])
 
     useEffect(() => {
-        DummyJson.get('users')
-        .then(res => setListUsuarios(res.data.users))
-        .catch(err => {
-            console.error(err)
-        })
-    }, [])
 
-    console.log(listUsuarios)
+        const getUsuario = async() => {
+            const res = await DummyJson.get('users')
+            setListUsuarios(res.data.users)
+        }
+        getUsuario()
+    }, [])
 
     return (
         <>
