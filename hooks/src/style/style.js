@@ -77,3 +77,179 @@ p {
     margin: 15px;
 }
 `;
+
+export const BotaoJogo = styled.div`
+
+display: flex;
+gap: 15em;
+
+button {
+    color: white;
+    width: 120px;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 15px;
+
+    transition: 1s;
+}
+
+button:hover {
+    border: 1px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    animation: rainbow 2.5s linear;
+	animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes rainbow{
+		100%,0%{
+			color: rgb(255,0,0);
+		}
+		8%{
+			color: rgb(255,127,0);
+		}
+		16%{
+			color: rgb(255,255,0);
+		}
+		25%{
+			color: rgb(127,255,0);
+		}
+		33%{
+			color: rgb(0,255,0);
+		}
+		41%{
+			color: rgb(0,255,127);
+		}
+		50%{
+			color: rgb(0,255,255);
+		}
+		58%{
+			color: rgb(0,127,255);
+		}
+		66%{
+			color: rgb(0,0,255);
+		}
+		75%{
+			color: rgb(127,0,255);
+		}
+		83%{
+			color: rgb(255,0,255);
+		}
+		91%{
+			color: rgb(255,0,127);
+		}
+}
+`
+
+export const Tutorial = styled.div`
+display: flex;
+flex-direction: column;
+
+margin: 50px;
+
+.tutorialContent {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 40px;
+
+    
+}
+
+.tutorialContent input{
+
+    margin-block: 40px;
+    margin-inline: 95px;
+}
+
+.tutorialContent .textoExemplo:nth-word(2) {
+    color: red;
+}
+
+`
+
+export const GameStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    height: 70vh;
+
+.telaInicial {
+    margin-top: 45px;
+}
+
+.telaInicial .tituloJogo{
+    display: flex;
+    justify-content: center;
+    
+    margin-bottom: 15px;
+
+    animation: rainbow 2.5s linear;
+	animation-iteration-count: infinite;
+}
+
+.telaInicial .tituloJogo p {
+    font-size: 5.5em;
+}
+
+.telaInicial .descJogo {
+    display: flex;
+    justify-content: center;
+
+}
+
+.telaInicial .descJogo p{
+    font-size: 1.3em;
+}
+
+.botoesInicial {
+    display: flex;
+    padding-top: 155px;
+
+    gap: 15em;
+}
+
+@keyframes rainbow{
+		100%,0%{
+			color: rgb(255,0,0);
+		}
+		8%{
+			color: rgb(255,127,0);
+		}
+		16%{
+			color: rgb(255,255,0);
+		}
+		25%{
+			color: rgb(127,255,0);
+		}
+		33%{
+			color: rgb(0,255,0);
+		}
+		41%{
+			color: rgb(0,255,127);
+		}
+		50%{
+			color: rgb(0,255,255);
+		}
+		58%{
+			color: rgb(0,127,255);
+		}
+		66%{
+			color: rgb(0,0,255);
+		}
+		75%{
+			color: rgb(127,0,255);
+		}
+		83%{
+			color: rgb(255,0,255);
+		}
+		91%{
+			color: rgb(255,0,127);
+		}
+}
+`

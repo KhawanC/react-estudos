@@ -20,12 +20,13 @@ function ComponenteNav(props) {
     <>
       <div style={props.claro ? divTema : {}}>
         <nav className="navegacao">
-          <button onClick={() => nav("/")} style={props.claro ? buttonTema : {}}>Tela inicial</button>
-          <button onClick={() => nav("/atividades") } style={props.claro ? buttonTema : {}}>Atividades</button>
-          <button onClick={() => nav("/sobre_mim") } style={props.claro ? buttonTema : {}}>Sobre mim</button>
+          <button onClick={() => nav("/")}>Tela inicial</button>
+          <button onClick={() => nav("/atividades") }>Atividades</button>
+          <button onClick={() => nav("/sobre_mim") } >Sobre mim</button>
+          <button onClick={() => nav("/game") } >Mini game</button>
         </nav>
         <div className="funcExtra">
-            <button onClick={e => {props.setClaro(!props.claro) } } style={props.claro ? buttonTema : {}}>Tema</button>
+            <button onClick={e => {props.setClaro(!props.claro) } }>Tema</button>
         </div>
       </div>
     </>
